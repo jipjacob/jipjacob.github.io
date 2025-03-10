@@ -25,8 +25,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Here, I cut through the buzzword-filled noise to deliver insights that are as honest as they are thought-provoking. 
   Forget the fluff; every post dives deep into real ideas, challenges the status quo, and connects complex concepts with no-nonsense clarity. 
   If you’re ready for a fresh take on the topics that shape our world, you’re in the right place.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jipjacob.github.io" # the subpath of your site, e.g. /blog
+url: "https://jipjacob.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  jipjacob
 
@@ -45,14 +45,14 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
