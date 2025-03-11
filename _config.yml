@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Sight of Jip
-email: your-email@example.com
+title: Jip's site
+email: jip@jipvanderheide.nl
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my blog—a digital hub where raw, unfiltered knowledge meets forward-thinking analysis. 
   Here, I cut through the buzzword-filled noise to deliver insights that are as honest as they are thought-provoking. 
@@ -32,11 +32,13 @@ github_username:  jipjacob
 
 # Build settings
 # theme: jekyll-theme-cayman
-remote_theme: pages-themes/cayman@v0.2.0
+# remote_theme: pages-themes/cayman@v0.2.0
 plugins:
+  - jekyll-target-blank
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-seo-tag
+
+header_page_refs: ['now', 'about', 'contact']
 
 # Exclude from processing.
 # The following items will not be processed, by default.
