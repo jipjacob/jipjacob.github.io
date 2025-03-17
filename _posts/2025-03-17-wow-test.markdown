@@ -1,0 +1,34 @@
+---
+layout: default
+title:  "MacBook Pro vs Mac Studio for World of Warcraft"
+date:   2025-03-17 13:03:00 +0100
+categories: mac macbook apple silicon studio pro 
+---
+When it comes to gaming, I've historically relied on Windows PCs or consoles. Many games weren't supported on Mac, and even when they were, Macs typically struggled with performance issues. This led me to purchase a dedicated gaming PC in my younger years.
+
+A few years ago, when I started college, I switched to a MacBook Pro for work purposes as I wasn't playing games as frequently. Specifically, I got a 16-inch MacBook Pro (2019) with an Intel i7 CPU, AMD Radeon 5500M GPU with 4GB VRAM, and 32GB of system memory. I occasionally attempted gaming on it, but the fans would immediately ramp up to maximum speed and the device would become very hot.
+
+Two years later, missing gaming, I purchased my brother's old gaming PC featuring an Intel i7 CPU and NVIDIA 1070 GPU. This setup performed well for most games I played at the time, particularly World of Warcraft. While WoW can be visually impressive, its graphics settings are highly customizable to match your hardware capabilities.
+
+My setup includes a 4K monitor, which presents a challenge - lower resolutions like 1080p or 1440p appear pixelated. On my gaming PC, I would set the resolution to 4K but use the lowest in-game quality settings for World of Warcraft. Unfortunately, the 1070 GPU struggled with 4K resolution, causing noticeable frame drops during graphically intensive moments.
+
+Since I was using my MacBook daily in clamshell mode connected to my monitor and working frequently from home, I decided to switch to a non-portable Mac setup. This led me to purchase the new Mac Studio with M4 Max processor. This machine is significantly more powerful than my MacBook, and I was curious whether it could run World of Warcraft comfortably at 4K resolution with decent quality settings. I conducted a comparison test between my MacBook and the new Mac Studio with the following results:
+
+![WoW graph image]({{ site.baseurl }}/assets/images/wow_graph.png)
+
+I used identical default settings in World of Warcraft on both devices, with just these modifications:
+- Max Foreground FPS: 200 (enabled)
+- Target FPS: 200 (enabled)
+- Vertical sync: Disabled (to prevent capping at 60 FPS)
+
+The data clearly shows that the Mac Studio can maintain 200 FPS (the cap I set) at 1080p and 1440p resolutions with quality settings below 7. Even at 4K resolution with quality set to 10 (maximum), the Mac Studio still delivers over 100 FPS, which is remarkable.
+
+In contrast, the MacBook Pro required lower than 4K resolution to exceed 60 FPS, as indicated by the red line in the chart. While 4K was technically possible, performance wasn't stable.
+
+In conclusion, I'm extremely satisfied with the Mac Studio's performance and its ability to maintain high frame rates even at 4K with maximum quality settings. I hope more developers will create native support for Apple Silicon chips in the future.
+
+Additional testing information:
+- Testing was conducted in the city of Orgrimmar
+- CPU utilization was approximately 35% on the MacBook and 20% on the Mac Studio
+- Operating temperatures were around 80°C for the MacBook and 45°C for the Mac Studio throughout testing
+- Apple Game Mode was NOT used on the Mac Studio
