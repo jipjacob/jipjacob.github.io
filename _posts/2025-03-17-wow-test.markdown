@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "MacBook Pro vs Mac Studio for World of Warcraft"
 date:   2025-03-17 13:03:00 +0100
 categories: mac macbook apple silicon studio pro 

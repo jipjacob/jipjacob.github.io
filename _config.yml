@@ -19,16 +19,16 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Jip's site
-email: jip@jipvanderheide.nl
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my blog—a digital hub where raw, unfiltered knowledge meets forward-thinking analysis. 
-  Here, I cut through the buzzword-filled noise to deliver insights that are as honest as they are thought-provoking. 
-  Forget the fluff; every post dives deep into real ideas, challenges the status quo, and connects complex concepts with no-nonsense clarity. 
-  If you’re ready for a fresh take on the topics that shape our world, you’re in the right place.
-baseurl: "https://jipjacob.github.io" # the subpath of your site, e.g. /blog
+  Hey there! I'm Jip, and this is where I dump all the random stuff that's taking up space in my brain.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jipjacob.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  jipjacob
+linkedin_username: jipjacob
+
+github:
+  owner_url: https://github.com/jipjacob
+  owner_name: jipjacob
 
 # Build settings
 # theme: jekyll-theme-cayman
@@ -38,7 +38,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-header_page_refs: ['now', 'about', 'contact']
+header_page_refs: ['blog', 'about', 'contact']
 
 # Exclude from processing.
 # The following items will not be processed, by default.

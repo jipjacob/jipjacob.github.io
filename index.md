@@ -8,10 +8,12 @@
 layout: home
 ---
 
-Cayman Blog Theme is a clean, responsive blogging theme for Jekyll. It is inspired by the Cayman Theme for Github Pages, which can be greatly used for single projects but not as blogging platform.
+By day, I work as an AI engineer, but this site isn't about my job—it's about everything else that keeps me up at night. Like, did you know that MacBook Pros and Mac Studios handle World of Warcraft totally differently? Or that there's a whole science to picking the right sleeves for your trading card games? Yeah, that's the kind of random knowledge you'll find here.
 
-This theme has instead all you need to start today blogging with Jekyll, and no effort: pages, posts, few social buttons. Try loading this on mobile too.
+I jump between topics faster than my cat chases laser pointers. One day I might be writing about how to hack your Enphase solar panel system, and the next I could be deep-diving into gaming performance metrics. There's no method to the madness—just stuff I find interesting and figure someone else might too.
 
-Have a look at the Github page for more information.
+When I'm not writing articles, I'm usually tinkering with projects—currently obsessing over programming the One Piece TCG and building an app that does some cool AI things (okay, so maybe a little of my day job sneaks in here).
 
-You find this descriptive text in the `index.md` file, so you can change it, or remove it completely, according to your needs.
+Feel free to poke around, read whatever catches your eye, or just judge my weird combination of interests. I'm still putting this place together, so the contact page is coming soon™.
+
+Fresh articles below—no subscription required, just pure, unfiltered thoughts from my brain to yours.

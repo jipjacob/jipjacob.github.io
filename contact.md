@@ -1,11 +1,17 @@
 ---
 layout: page
 title: Contact
-tagline: Create a contact form and you are good to go
+tagline: Got a question?
 ref: contact
 order: 1
 ---
 
-Jekyll is a great tool to create static sites but with static site, there's no backend to send your data to: that is why you need a third part service.
+Want to chat? Got questions? Found an error in one of my articles that's keeping you up at night?
+
+I'm not big on sharing my email address with the entire internet (hello, spam folders), but you can always reach me through my [LinkedIn profile](https://www.linkedin.com/in/{{ site.linkedin_username }}).
+
+Feel free to connect and send me a message there. I usually respond within a few days, unless I'm deep in a coding sprint or testing which card sleeves survive coffee spills better.
+
+If you're reaching out about one of my articles or projects, let me know which one caught your attention!
 
 [Go to the Home Page]({{ '/' | absolute_url }})
