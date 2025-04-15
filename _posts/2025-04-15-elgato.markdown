@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Turning off the Elgato Stream Deck Automaticly"
+title:  "Turning off the Elgato Stream Deck Automatically"
 date:   2025-03-17 16:13:00 +0100
 categories: elgato stream deck automation mac
 ---
-###### Keep in mind. This guide is just for Mac users
+
 
 I’ve been using the Stream Deck Elgato XL for a few years now, and I’m super happy with it. As I mentioned in my previous article, I’m not much of a gamer, so I don’t use it for streaming, obviously 😁. I’ve been using it for mostly simple stuff like starting an app, skipping a song, or running scripts. The cool thing is that it switches profiles based on the app you’re currently using. I mostly use it for programming. I use PyCharm as my main IDE for writing code, and I have a profile just for opening windows or debugging in PyCharm.
 
@@ -13,6 +13,8 @@ The only thing that really bugged me is that it wakes when your computer wakes u
 I thought about how to fix this and even talked to a few people about it. The easiest solution would be to just remove the USB cable so it doesn’t turn on. But I don’t like the idea of having to manually remove the cable every day just to turn it off. Another idea would be to put a USB hub in the middle that you can turn off by flipping a switch. I’m not really a fan of using a hub in the middle. The cheap ones can cause trouble because of the power that goes through them, and you’ll need one that can also transfer data, which means it’ll cost extra money.
 
 I like automating things, so I came up with a solution. I wrote a Python script to turn off the Stream Deck app, so you can control it using Python. With the Python SDK, I’m setting the brightness of the Elgato to 0%.
+
+###### Keep in mind. This guide is just for Mac users
 
 # Setting Up Automation
 
