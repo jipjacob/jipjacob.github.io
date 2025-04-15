@@ -1,0 +1,93 @@
+---
+layout: post
+title:  "Turning off the Elgato Stream Deck Automaticly"
+date:   2025-03-17 16:13:00 +0100
+categories: elgato stream deck automation mac
+---
+###### Keep in mind. This guide is just for Mac users
+
+I’ve been using the Stream Deck Elgato XL for a few years now, and I’m super happy with it. As I mentioned in my previous article, I’m not much of a gamer, so I don’t use it for streaming, obviously 😁. I’ve been using it for mostly simple stuff like starting an app, skipping a song, or running scripts. The cool thing is that it switches profiles based on the app you’re currently using. I mostly use it for programming. I use PyCharm as my main IDE for writing code, and I have a profile just for opening windows or debugging in PyCharm.
+
+The only thing that really bugged me is that it wakes when your computer wakes up. At first, you might think this isn’t a big deal, but it’s a pain when you leave your computer on at night and suddenly, when you’re sleeping, there’s this bright light shining through your room.
+
+I thought about how to fix this and even talked to a few people about it. The easiest solution would be to just remove the USB cable so it doesn’t turn on. But I don’t like the idea of having to manually remove the cable every day just to turn it off. Another idea would be to put a USB hub in the middle that you can turn off by flipping a switch. I’m not really a fan of using a hub in the middle. The cheap ones can cause trouble because of the power that goes through them, and you’ll need one that can also transfer data, which means it’ll cost extra money.
+
+I like automating things, so I came up with a solution. I wrote a Python script to turn off the Stream Deck app, so you can control it using Python. With the Python SDK, I’m setting the brightness of the Elgato to 0%.
+
+# Setting Up Automation
+
+There are two ways to run this Python script automatically. One is to use a LaunchAgent, and the other is to use a cronjob. I chose to go with a LaunchAgent because that’s how Mac usually runs tasks in the background, but a cronjob is even easier to use.
+
+You can find all the [files](https://github.com/jipjacob/jipjacob.github.io/tree/main/assets/scripts/elgato) that you'll need by clicking the link.
+
+## LaunchAgent
+
+Here’s a step-by-step guide to setting up a Python script on your Mac by using LaunchAgents:
+
+1. Open the /Library/LaunchAgents folder and place the file named com.jip.turnOffElgato.plist in there.
+2. Replace the word “jip” with your Mac’s username.
+3. Change the file path to the wrapper in the plist file. I’ve already created this wrapper to set up the Python environment and create logs for running the Python script.
+
+4. After all of this is done you can go to your terminal and run:
+
+    ```bash
+    launchctl load ~/Library/LaunchAgents/com.jip.turnOffElgato.plist 
+    ```
+    Here you should also replace the name to your Mac’s username. 
+
+5. Now, let’s get started with running the script. Make sure you have a Python environment with the streamdeck installed. If you don't have one, you can create one by running this:
+
+    ```bash
+    python -m venv venv
+    ```
+
+6. Activate your newly created environment and install the streamdeck library: 
+
+    ```bash
+    source venv/bin/activate
+    pip install streamdeck
+    ```
+
+7. To connect to your Elgato, you need to install the LibUSB HIDAPI Backend. You can do this by installing Homebrew and then running the following command: 
+
+    ```bash
+    brew install hidapi
+    ```
+
+8. Now you need to change the path in the turn_off_wrapper.sh to where the Python script and environment are stored. 
+
+9. The last thing is to make the shell script executable by running 
+
+    ```bash
+    chmod +x turn_off_wrapper.sh
+    ```
+
+    Now the LaunchAgent has been activated and will run the wrapper -> python script at the time set in the plist file (23:00) every day.
+
+## Cronjob
+
+Creating a cronjob is a breeze compared to setting up a LaunchAgent.
+You’ll skip steps 1 through 4, but you’ll still need to follow the rest of the process. 
+
+Go through steps 5-9. After that, run the following command in your terminal  to open your cronjobs:
+
+```bash
+crontab -e
+```
+
+Add the following line to the file:
+
+```bash
+0 23 * * * /full/path/to/turn_off_wrapper.sh
+```
+You'll need to change where the wrapper is stored. 
+
+## Extra
+
+These scripts will only run when your Mac is awake. If it’s asleep, the scripts won’t run, and the Elgato will stay on. To run the script, you can wake your Mac by setting a psmet. 
+
+```bash
+sudo pmset repeat wake MTWRFSU 22:59:00
+```
+
+In this cause, I wake the Mac 1 minute before the LaunchAgent or cronjob takes action.
