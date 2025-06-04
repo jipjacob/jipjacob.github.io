@@ -21,7 +21,13 @@ layout: default
           <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
 
-        {{ post.excerpt | markdownify | truncatewords: 30 }}
+        {% assign content = post.content | split: '<h1' %}
+        {% if content.size > 1 %}
+          {% assign first_paragraph = content[1] | split: '</h1>' | last | strip_html | strip_newlines %}
+        {% else %}
+          {% assign first_paragraph = post.content | strip_html | strip_newlines %}
+        {% endif %}
+        {{ first_paragraph | truncatewords: 30 }}
 
       </li>
     {% endfor %}
