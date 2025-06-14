@@ -8,7 +8,7 @@ order: 1
 
 Want to chat? Got questions? Found an error in one of my articles that's keeping you up at night?
 
-I'm not big on sharing my email address with the entire internet (hello, spam folders), but you can always reach me through my [LinkedIn profile](https://www.linkedin.com/in/{{ site.linkedin_username }}).
+My email adress is: jipjacob [at] me [dot] com. You can also reach me through my [LinkedIn profile](https://www.linkedin.com/in/{{ site.linkedin_username }}).
 
 Feel free to connect and send me a message there. I usually respond within a few days, unless I'm deep in a coding sprint or testing which card sleeves survive coffee spills better.
 
